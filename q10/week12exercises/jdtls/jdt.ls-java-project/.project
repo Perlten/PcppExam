@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/testingconcurrency/ConcurrentIntegerSet.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ConcurrentJavaExercises/all-exercises/app/src/main/java/week12/code-exercises/week12exercises/app/src/main/java/testingconcurrency/ConcurrentIntegerSet.java</location>
+		</link>
+		<link>
+			<name>src/testingconcurrency/ConcurrentSetTest.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ConcurrentJavaExercises/all-exercises/app/src/main/java/week12/code-exercises/week12exercises/app/src/test/java/testingconcurrency/ConcurrentSetTest.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

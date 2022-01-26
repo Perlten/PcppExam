@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/AccountExperiments.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week06/Exercises/AccountExperiments.java</location>
+		</link>
+		<link>
+			<name>src/ProblemHeapSortingBenchmarkable.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week06/Exercises/ProblemHeapSortingBenchmarkable.java</location>
+		</link>
+		<link>
+			<name>src/SimpleHistogram.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week06/Exercises/SimpleHistogram.java</location>
+		</link>
+		<link>
+			<name>src/ThreadsAccountExperimentsMany.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week06/Exercises/ThreadsAccountExperimentsMany.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

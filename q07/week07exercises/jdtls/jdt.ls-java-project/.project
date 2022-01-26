@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/exercises07/CasHistogram.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/CasHistogram.java</location>
+		</link>
+		<link>
+			<name>src/exercises07/ReadWriteCASLock.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/ReadWriteCASLock.java</location>
+		</link>
+		<link>
+			<name>src/exercises07/SimpleRWTryLock.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/SimpleRWTryLock.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

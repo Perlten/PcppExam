@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week10/code-exercises/week10exercises/jdtls/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+3842426239.index
+1597067313.index

@@ -1,0 +1,23 @@
+4.1.2
+# It is thread safe because i have created a happens before relation between take->insert and insert->take.  
+Im not 100% sure since insert could insert two times on "index" 0
+
+4.1.3
+I don't believe so since i cant create a happen before relationship between insert->take and take->insert
+
+4.1.4
+It does matter in the case. If multiple threads are await to acquire the semaphore then if the fair flag is set, the thread that have waited the longest will be picked from the entry queue.
+
+4.2.2
+The class is thread safe because we have ensured mutual exclusion on all method that alters the data. getAddress and getZip is also sync since we change the two fields in a single set method. 
+getName does not need to be sync since the field can never be changed outside the class, and the field is volatile thereby making it visible to all threads.
+By marking all the fields as either final or volatile we ensure that we have initialized the object before publication.
+
+4.2.4
+It is not sufficient to simply run the program when determining if a class is thread safe, because so many factors depend on jvm and the scheduler. To determine if a class is thread class we need to 
+analyze the class to ensure so.
+
+
+4.3.1
+
+

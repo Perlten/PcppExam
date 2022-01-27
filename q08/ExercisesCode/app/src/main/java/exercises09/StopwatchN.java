@@ -16,8 +16,6 @@ public class StopwatchN {
     public StopwatchN(int n) {
 
         for (int i = 0; i < n; i++) {
-
-
             final JFrame f = new JFrame("Stopwatch");
             final stopwatchUI myUI = new stopwatchUI(0, f);
             f.setBounds(0, 0, 220, 220);

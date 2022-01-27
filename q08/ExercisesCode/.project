@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ExercisesCode</name>
+	<name>exercises09</name>
 	<comment>Project ExercisesCode created by Buildship.</comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1643199401570</id>
+			<id>1643239334917</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

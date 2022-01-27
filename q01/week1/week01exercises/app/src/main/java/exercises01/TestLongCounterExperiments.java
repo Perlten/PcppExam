@@ -60,9 +60,9 @@ public class TestLongCounterExperiments {
       }
     }
 
-    public void decrement() { 
+    public void decrement() {
       lock.lock();
-      count--; 
+      count--;
       lock.unlock();
     }
 

@@ -18,12 +18,17 @@
 		<link>
 			<name>src/mobilepayment/Main.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week10/code-exercises/week10exercises/app/src/main/java/mobilepayment/Main.java</location>
+			<location>/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week10/code-exercises/week10exercises/app/src/main/java/mobilepayment/Main.java</location>
+		</link>
+		<link>
+			<name>src/mobilepayment/Messages.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q09/week10/week10exercises/app/src/main/java/mobilepayment/Messages.java</location>
 		</link>
 		<link>
 			<name>src/mobilepayment/MobileApp.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week10/code-exercises/week10exercises/app/src/main/java/mobilepayment/MobileApp.java</location>
+			<location>/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week10/code-exercises/week10exercises/app/src/main/java/mobilepayment/MobileApp.java</location>
 		</link>
 		<link>
 			<name>src/mobilepayment/SystemGuardian.java</name>

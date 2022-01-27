@@ -16,7 +16,6 @@ public class MonitorImpl {
     public void lockRead() {
         lock.lock();
         try {
-
             while (write) {
                 try {
                     condition.await();

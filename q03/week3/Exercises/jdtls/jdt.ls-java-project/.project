@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/exercises03/Benchmark.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q03/week3/Exercises/app/src/main/java/exercises03/Benchmark.java</location>
+		</link>
+		<link>
+			<name>src/exercises03/TestCountPrimes.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q03/week3/Exercises/app/src/main/java/exercises03/TestCountPrimes.java</location>
+		</link>
+		<link>
+			<name>src/exercises03/TestTimeThreads.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q03/week3/Exercises/app/src/main/java/exercises03/TestTimeThreads.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

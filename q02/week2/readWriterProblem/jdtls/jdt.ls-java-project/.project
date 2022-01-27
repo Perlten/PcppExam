@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/readWriterProblem/App.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q02/week2/readWriterProblem/app/src/main/java/readWriterProblem/App.java</location>
+		</link>
+		<link>
+			<name>src/readWriterProblem/MonitorImpl.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q02/week2/readWriterProblem/app/src/main/java/readWriterProblem/MonitorImpl.java</location>
+		</link>
+		<link>
+			<name>src/readWriterProblem/TestLocking0.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q02/week2/readWriterProblem/app/src/main/java/readWriterProblem/TestLocking0.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

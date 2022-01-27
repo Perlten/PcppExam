@@ -1,4 +1,29 @@
-INDEX VERSION 1.131+/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week06/Exercises/jdtls/.metadata/.plugins/org.eclipse.jdt.core
-3842426239.index
-1597067313.index
+INDEX VERSION 1.131+/home/perlt/dev/school/pcppExam/q06/Exercises/jdtls/.metadata/.plugins/org.eclipse.jdt.core
+513659397.index
+804510062.index
+4013154873.index
+2719035569.index
+3219653143.index
+1952113339.index
+3038926365.index
 1865797976.index
+3652997711.index
+3043040163.index
+3382761030.index
+1946667933.index
+3637270249.index
+3842426239.index
+4013607337.index
+3883566595.index
+808945692.index
+3839873592.index
+3873624262.index
+3033732664.index
+1190498888.index
+818667174.index
+192378804.index
+394656645.index
+1778629285.index
+3441775976.index
+1769190871.index
+1058169971.index

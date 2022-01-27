@@ -2,146 +2,192 @@
 // raup@itu.dk * 10/10/2021
 package exercises07;
 
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
+import org.checkerframework.checker.units.qual.A;
 
 class ReadWriteCASLock implements SimpleRWTryLockInterface {
 
-  public static void main(String[] args) {
+    ReaderList readerList = new ReaderList();
+    AtomicReference<Holders> holder = new AtomicReference<>(readerList);
 
-    ReadWriteCASLock lockingSystem = new ReadWriteCASLock();
+    public static void main(String[] args) throws Exception {
 
-    Executor executor = Executors.newFixedThreadPool(2);
+        ReadWriteCASLock lockingSystem = new ReadWriteCASLock();
 
-    executor.execute(() -> {
-      try {
-        System.out.println("Reader: " + lockingSystem.readerTryLock() + " " +
-                           Thread.currentThread().getId());
-        lockingSystem.readerUnlock();
-        System.out.println("Reader: " + lockingSystem.readerTryLock() + " " +
-                           Thread.currentThread().getId());
-        Thread.sleep(2000);
-        lockingSystem.readerUnlock();
-        Thread.sleep(8000);
-        System.out.println("Reader: " + lockingSystem.readerTryLock() + " " +
-                           Thread.currentThread().getId());
-        System.out.println("Reader: " + lockingSystem.readerTryLock() + " " +
-                           Thread.currentThread().getId());
-        lockingSystem.readerUnlock();
-        lockingSystem.readerUnlock();
-      } catch (Exception e) {
-        System.out.println(e.getMessage());
-      }
-    });
+        Executor executor = Executors.newFixedThreadPool(2);
 
-    executor.execute(() -> {
-      try {
-        Thread.sleep(2000);
-        System.out.println("Writer: " + lockingSystem.writerTryLock() +
-                           " writer " + Thread.currentThread().getId());
-        Thread.sleep(1000);
-        System.out.println("Writer: " + lockingSystem.writerTryLock() +
-                           " writer " + Thread.currentThread().getId());
-        lockingSystem.writerUnlock();
-      } catch (Exception e) {
-        System.out.println(e.getMessage());
-      }
-    });
-  }
+        executor.execute(() -> {
+            try {
+                System.out.println(lockingSystem.readerTryLock() + " " +
+                        Thread.currentThread().getId());
+                lockingSystem.readerUnlock();
+                System.out.println(lockingSystem.readerTryLock() + " " +
+                        Thread.currentThread().getId());
+                Thread.sleep(2000);
+                lockingSystem.readerUnlock();
+                Thread.sleep(8000);
+                System.out.println(lockingSystem.readerTryLock() + " " +
+                        Thread.currentThread().getId());
+                System.out.println(lockingSystem.readerTryLock() + " " +
+                        Thread.currentThread().getId());
+                lockingSystem.readerUnlock();
+                lockingSystem.readerUnlock();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        });
 
-  private AtomicReference<ReadWriteCASLock.Holders> holder =
-      new AtomicReference<>();
+        executor.execute(() -> {
+            try {
+                Thread.sleep(2000);
+                System.out.println(lockingSystem.writerTryLock() + " writer " +
+                        Thread.currentThread().getId());
+                Thread.sleep(1000);
+                System.out.println(lockingSystem.writerTryLock() + " writer " +
+                        Thread.currentThread().getId());
+                lockingSystem.writerUnlock();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        });
 
-  public boolean readerTryLock() {
-    var currentHolder = this.holder;
+        // System.out.println(lockingSystem.readerTryLock() + " " +
+        // Thread.currentThread().getId());
+        // System.out.println(lockingSystem.readerTryLock() + " " +
+        // Thread.currentThread().getId());
+        // System.out.println(lockingSystem.readerTryLock() + " " +
+        // Thread.currentThread().getId()); lockingSystem.readerUnlock();
+        // lockingSystem.readerUnlock();
+        // lockingSystem.readerUnlock();
 
-    if (currentHolder.get() == null) {
-      return currentHolder.compareAndSet(
-          null, new ReaderList(Thread.currentThread(), null));
     }
+    public boolean readerTryLock() {
 
-    // if a reader already holds the lock simple append a lock to the list
-    if (currentHolder.get() instanceof ReaderList) {
-      var currentReaderList = (ReaderList)currentHolder.get();
-      var latestReaderList = currentReaderList;
+        final Thread current = Thread.currentThread();
 
-      while (latestReaderList.next != null) {
-        latestReaderList = latestReaderList.next;
-      }
+        List<Thread> readers = readerList.readers;
+        readers.add(current);
 
-      latestReaderList.next =
-          new ReaderList(Thread.currentThread(), latestReaderList);
+        Holders h = holder.get();
 
-      return this.holder.compareAndSet(currentReaderList, currentReaderList);
-    }
-
-    return false;
-  }
-
-  public void readerUnlock() throws Exception {
-    var currentThread = Thread.currentThread();
-    var currentHolder = this.holder.get();
-
-    if (currentHolder == null || currentHolder instanceof Writer) {
-      throw new Exception("YOU ARE NOT THE HOLDER !!");
-    }
-    var currentReader = (ReaderList)this.holder.get();
-    if (currentReader.next == null) {
-      this.holder.compareAndSet(currentReader, null);
-    }
-
-    // Renove the node belonging to the current thread 
-    if (currentReader.thread == currentThread) {
-      currentReader = currentReader.next;
-    } else {
-      var latestReader = currentReader;
-      do {
-        if (latestReader.thread == currentThread) {
-          latestReader.parrent.next = latestReader.next;
-          break;
+        while (true) {
+            if (h instanceof ReaderList) {
+                boolean success = holder.compareAndSet(h, readerList);
+                if (success) {
+                    return true;
+                }
+            } else {
+                readerList.readers = new LinkedList<>();
+                return false;
+            }
         }
-        latestReader = latestReader.next;
-      } while (latestReader != null);
     }
-    this.holder.compareAndSet(currentReader, currentReader);
-  }
 
-  public boolean writerTryLock() {
-    Holders newHolder = new Writer(Thread.currentThread());
-    return this.holder.compareAndSet(null, newHolder);
-  }
+    // Challenging 7.2.7: You may add new methods
+    public void readerUnlock() throws Exception {
 
-  public void writerUnlock() throws Exception {
-    var currentHolder = this.holder.get();
-    if (currentHolder instanceof Writer) {
-      Writer writer = (Writer)currentHolder;
-      if (writer.thread != Thread.currentThread()) {
-        throw new Exception("YOU ARE NOT THE HOLDER !!");
-      }
-      this.holder.compareAndSet(currentHolder, null);
+        final Thread current = Thread.currentThread();
+
+        if (holder == null) {
+            throw new Exception("Not even sure how you got here, holder is null!");
+        }
+        if (!readerList.contains(current)) {
+            throw new Exception(
+                    "You cant unluck, youre not even in the pool my man!");
+        } else {
+            readerList.remove(current);
+        }
+        if (readerList.readers.isEmpty()) {
+            while (true) {
+                Holders h = holder.get();
+                boolean success = holder.compareAndSet(h, readerList);
+                if (success)
+                    break;
+            }
+        }
+
+        System.out.println("unlocked by thread " + current.getId());
     }
-  }
 
-  private static abstract class Holders {}
+    public boolean writerTryLock() {
+        final Thread current = Thread.currentThread();
 
-  private static class ReaderList extends Holders {
-    private final Thread thread;
-    private ReaderList next = null;
-    private ReaderList parrent = null;
+        Writer w = new Writer(current.getId());
 
-    public ReaderList(Thread t, ReaderList parrent) {
-      this.thread = t;
-      this.parrent = parrent;
+        Holders h = holder.get();
+
+        if (h instanceof ReaderList) {
+            if (((ReaderList) h).readers.isEmpty()) {
+                return holder.compareAndSet(h, w);
+            }
+        }
+
+        return false;
     }
-  }
 
-  private static class Writer extends Holders {
-    public final Thread thread;
+    public void writerUnlock() throws Exception {
 
-    public Writer(Thread t) { this.thread = t; }
-  }
+        final Thread current = Thread.currentThread();
+
+        long id = current.getId();
+
+        Holders h = holder.get();
+
+        if (h == null) {
+            throw new Exception(
+                    "damn, u cant call this, when holders is null, then u do not own the lock mister");
+        } else if (!(h instanceof Writer)) {
+            throw new Exception(
+                    "Youre not even a Writer, how are you here mr reader!");
+        } else if (h instanceof Writer) {
+            Writer x = (Writer) h;
+            if (x.id != id) {
+                throw new Exception("Thread isnt owner, wrong writer!!");
+            } else {
+                holder.compareAndSet(h, readerList);
+            }
+        }
+    }
+
+    private static abstract class Holders {
+    }
+
+    private static class ReaderList extends Holders {
+
+        public List<Thread> readers = new LinkedList<>();
+
+        public ReaderList() {
+        }
+
+        public void add(Thread t) {
+            synchronized (ReaderList.class) {
+                readers.add(t);
+            }
+        }
+
+        public boolean contains(Thread t) {
+            return readers.contains(t);
+        }
+
+        public void remove(Thread t) {
+            synchronized (ReaderList.class) {
+                readers.remove(t);
+            }
+        }
+    }
+
+    private static class Writer extends Holders {
+
+        long id;
+
+        private Writer(long id) {
+            this.id = id;
+        }
+    }
 }

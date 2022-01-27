@@ -16,9 +16,24 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src/mathsserver/Client.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q09/week11/week11exercises/app/src/main/java/mathsserver/Client.java</location>
+		</link>
+		<link>
+			<name>src/mathsserver/Guardian.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/pcppExam/q09/week11/week11exercises/app/src/main/java/mathsserver/Guardian.java</location>
+		</link>
+		<link>
 			<name>src/mathsserver/Main.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week11/code-exercises/week11exercises/app/src/main/java/mathsserver/Main.java</location>
+			<location>/home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week11/code-exercises/week11exercises/app/src/main/java/mathsserver/Main.java</location>
+		</link>
+		<link>
+			<name>src/mathsserver/Server.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q09/week11/week11exercises/app/src/main/java/mathsserver/Server.java</location>
 		</link>
 	</linkedResources>
 </projectDescription>

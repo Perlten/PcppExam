@@ -206,3 +206,1771 @@ Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid projec
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-26 13:53:01.845
 !MESSAGE >> shutdown
+!SESSION 2022-01-27 00:22:11.859 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_DK
+Command-line arguments:  -data jdtls
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-27 00:22:12.289
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.632
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.744
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.767
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.768
+!MESSAGE Initializing Java Language Server 1.8.0.202201200144
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.784
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.785
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.789
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.789
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.822
+!MESSAGE ProjectRegistryRefreshJob finished 32ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.822
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.832
+!MESSAGE Started org.eclipse.buildship.core 10ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.843
+!MESSAGE LoadingGradleVersionJob finished 11ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:12.854
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.212
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.213
+!MESSAGE No previous Gradle project at /home/perlt/dev/school/pcppExam/q08/ExercisesCode, it must be synchronized
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-01-27 00:22:13.215
+!MESSAGE /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+	at org.eclipse.jdt.ls.core.internal.ExceptionFactory.newException(ExceptionFactory.java:28)
+	at org.eclipse.jdt.ls.internal.gradle.checksums.WrapperValidator.checkWrapper(WrapperValidator.java:95)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.getGradleDistribution(GradleProjectImporter.java:206)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.getBuildConfiguration(GradleProjectImporter.java:315)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:306)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.ls.core 4 0 2022-01-27 00:22:13.216
+!MESSAGE /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+
+!ENTRY org.eclipse.buildship.core 2 1 2022-01-27 00:22:13.253
+!MESSAGE Synchronize project ExercisesCode failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:307)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 19 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:266)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 26 more
+
+!ENTRY org.eclipse.buildship.core 2 1 2022-01-27 00:22:13.254
+!MESSAGE Synchronize project ExercisesCode failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:307)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 19 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:266)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 26 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.257
+!MESSAGE Workspace initialized in 413ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.280
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.283
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.300
+!MESSAGE >> New configuration: {java={progressReports={enabled=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.304
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.615
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.617
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:13.618
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:14.096
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:14.527
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:14.527
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:22:14.529
+!MESSAGE Validated 1. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.645
+!MESSAGE >> document/formatting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.676
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.679
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.681
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.682
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.683
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:44.738
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:45.216
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:45.217
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:45.217
+!MESSAGE Validated 1. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 00:28:45.343
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.443
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.451
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.472
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.508
+!MESSAGE Reconciled 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.984
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.984
+!MESSAGE 2 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:51.984
+!MESSAGE Validated 1. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:52.632
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:52.663
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:53.127
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:53.128
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:53.128
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:00:53.333
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:23.577
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:23.638
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:23.677
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:24.111
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:24.111
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:24.111
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:25.843
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:25.901
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:26.363
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:26.363
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:26.364
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:29.986
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:29.996
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:30.087
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:30.461
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:30.461
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:30.461
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:30.988
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:31.047
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:31.462
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:31.462
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:31.462
+!MESSAGE Validated 1. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:31.686
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.318
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.361
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.734
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.734
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:35.734
+!MESSAGE Validated 1. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:37.351
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:37.360
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:37.829
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:37.829
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:37.829
+!MESSAGE Validated 1. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:41.508
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:41.532
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:41.572
+!MESSAGE Reconciled 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:41.608
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.044
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.044
+!MESSAGE 2 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.045
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.378
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.408
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.436
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.899
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.899
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:42.899
+!MESSAGE Validated 1. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:43.363
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:43.424
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:43.858
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:43.859
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:43.859
+!MESSAGE Validated 1. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.149
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.207
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.248
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.667
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.667
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:45.667
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:46.899
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:46.959
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:47.429
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:47.429
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:47.429
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.282
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.339
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.383
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.805
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.806
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:49.806
+!MESSAGE Validated 1. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:50.704
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:50.765
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:51.179
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:51.180
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:51.180
+!MESSAGE Validated 1. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.220
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.279
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.320
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.738
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.738
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:56.738
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:57.851
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:57.910
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:58.323
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:58.323
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:01:58.323
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.427
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.486
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.527
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.950
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.951
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:00.951
+!MESSAGE Validated 1. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:01.379
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:01.438
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:01.900
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:01.900
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:01.900
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.156
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.158
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.216
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.675
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.675
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:29.675
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.038
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.042
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.100
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.557
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.558
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.558
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.950
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:31.953
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:32.010
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:32.422
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:32.422
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:32.423
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.180
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.239
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.647
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.648
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:33.648
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.449
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.450
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.507
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.587
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.971
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.971
+!MESSAGE 6 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:40.971
+!MESSAGE Validated 1. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:41.801
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:41.861
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:42.275
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:42.275
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:42.275
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:43.819
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:43.878
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:43.922
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:44.290
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:44.291
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:44.291
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:44.796
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:44.855
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:45.316
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:45.317
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:45.317
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:45.372
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:54.123
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:54.135
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:54.547
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:54.548
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:54.548
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.341
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.347
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.350
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.350
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.607
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.608
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:56.665
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.126
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.127
+!MESSAGE 2 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.127
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.815
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.875
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.961
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:57.968
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:58.356
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:58.379
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:58.380
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:02:58.380
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.488
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.492
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.493
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.494
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.495
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.551
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.964
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.964
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:00.964
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.680
+!MESSAGE >> document/formatting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.689
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.690
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.690
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.691
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.692
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:03.748
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:04.160
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:04.160
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:04.160
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:04.244
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:06.699
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:06.757
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:06.800
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:07.192
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:07.193
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:07.193
+!MESSAGE Validated 1. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:09.524
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:09.535
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:09.943
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:09.943
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:09.943
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:11.967
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:12.025
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:12.068
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:12.484
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:12.484
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:12.484
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:13.052
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:13.111
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:13.523
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:13.523
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:13.523
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.076
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.133
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.177
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.542
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.542
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:24.542
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:26.609
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:26.668
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:27.092
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:27.092
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:27.092
+!MESSAGE Validated 1. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:29.664
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:29.722
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:29.765
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:30.183
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:30.184
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:30.186
+!MESSAGE Validated 1. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:30.964
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:31.023
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:31.482
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:31.482
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:31.482
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.388
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.447
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.489
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.902
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.902
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:37.903
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:39.428
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:39.487
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:39.942
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:39.943
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:39.943
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.214
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.273
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.316
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.733
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.733
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:42.733
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:44.041
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:44.100
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:44.556
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:44.556
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:44.556
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:45.773
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:45.832
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:45.874
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:46.289
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:46.289
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:46.289
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:46.550
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:46.608
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:47.065
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:47.065
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:47.065
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:50.775
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:50.777
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:50.834
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:51.287
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:51.287
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:51.287
+!MESSAGE Validated 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.082
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.084
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.085
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.142
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.283
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.284
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.341
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.798
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.798
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:52.799
+!MESSAGE Validated 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:56.611
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:56.669
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:56.712
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:57.078
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:57.078
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:57.078
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:57.566
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:57.625
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:58.084
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:58.084
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:58.085
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.360
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.418
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.460
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.845
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.846
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:03:59.847
+!MESSAGE Validated 1. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:00.109
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:00.170
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:00.630
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:00.630
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:00.630
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.460
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.519
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.561
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.981
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.981
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:01.981
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:03.696
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:03.756
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:04.214
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:04.214
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:04.214
+!MESSAGE Validated 1. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:05.653
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:05.712
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:05.755
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.167
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.167
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.167
+!MESSAGE Validated 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.422
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.479
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.935
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.935
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:04:06.936
+!MESSAGE Validated 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:04.582
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:04.639
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.098
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.098
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.098
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.500
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.559
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.974
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.975
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:06:05.975
+!MESSAGE Validated 1. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:47.869
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:47.929
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:48.340
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:48.340
+!MESSAGE 2 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:48.340
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:48.995
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:49.054
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:49.397
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:49.513
+!MESSAGE begin problem for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:49.513
+!MESSAGE 1 problems reported for /ObservableTester.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 02:15:49.513
+!MESSAGE Validated 1. Took 8 ms
+!SESSION 2022-01-27 13:56:26.206 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_DK
+Command-line arguments:  -data jdtls
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-27 13:56:26.645
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:26.992
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.123
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.149
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.151
+!MESSAGE Initializing Java Language Server 1.8.0.202201200144
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.174
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.175
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.180
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.181
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.193
+!MESSAGE ProjectRegistryRefreshJob finished 12ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.194
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.210
+!MESSAGE Started org.eclipse.buildship.core 16ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.221
+!MESSAGE LoadingGradleVersionJob finished 11ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.230
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.621
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.623
+!MESSAGE No previous Gradle project at /home/perlt/dev/school/pcppExam/q08/ExercisesCode, it must be synchronized
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-01-27 13:56:27.625
+!MESSAGE /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+	at org.eclipse.jdt.ls.core.internal.ExceptionFactory.newException(ExceptionFactory.java:28)
+	at org.eclipse.jdt.ls.internal.gradle.checksums.WrapperValidator.checkWrapper(WrapperValidator.java:95)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.getGradleDistribution(GradleProjectImporter.java:206)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.getBuildConfiguration(GradleProjectImporter.java:315)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:306)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.ls.core 4 0 2022-01-27 13:56:27.626
+!MESSAGE /home/perlt/dev/school/pcppExam/q08/ExercisesCode/gradle/wrapper/gradle-wrapper.jar doesn't exist.
+
+!ENTRY org.eclipse.buildship.core 2 1 2022-01-27 13:56:27.659
+!MESSAGE Synchronize project ExercisesCode failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:307)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 19 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:266)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 26 more
+
+!ENTRY org.eclipse.buildship.core 2 1 2022-01-27 13:56:27.661
+!MESSAGE Synchronize project ExercisesCode failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:225)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:192)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:100)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:307)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:196)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.lambda$2(GradleProjectImporter.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:167)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:124)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:107)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:244)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.access$200(ImportRootProjectOperation.java:39)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2333)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 19 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:266)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 26 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.663
+!MESSAGE Workspace initialized in 441ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.687
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.689
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.698
+!MESSAGE >> New configuration: {java={progressReports={enabled=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.700
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.946
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.948
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:27.949
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:28.423
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:28.969
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:28.970
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:28.976
+!MESSAGE Validated 1. Took 103 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:32.087
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2022-01-27 13:56:32.696
+!MESSAGE Unable to read documentation
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:155)
+	at org.eclipse.jdt.ls.core.internal.contentassist.SignatureHelpRequestor.computeJavaDoc(SignatureHelpRequestor.java:228)
+	at org.eclipse.jdt.ls.core.internal.contentassist.SignatureHelpRequestor.toSignatureInformation(SignatureHelpRequestor.java:147)
+	at org.eclipse.jdt.ls.core.internal.contentassist.SignatureHelpRequestor.getSignatureHelp(SignatureHelpRequestor.java:96)
+	at org.eclipse.jdt.ls.core.internal.handlers.SignatureHelpHandler.signatureHelp(SignatureHelpHandler.java:87)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$8(JDTLanguageServer.java:572)
+	at org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:75)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:39.270
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.002
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.009
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.014
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.060
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.070
+!MESSAGE Reconciled 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.094
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.534
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.534
+!MESSAGE 2 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.534
+!MESSAGE Validated 1. Took 62 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.898
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:41.966
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:42.436
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:42.436
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:42.436
+!MESSAGE Validated 1. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:45.442
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:45.602
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:47.587
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:49.413
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:49.546
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:52.560
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:56:56.458
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:01.033
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:03.069
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.068
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.079
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.085
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.098
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.130
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.596
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.596
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:05.597
+!MESSAGE Validated 1. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:08.630
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:08.641
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:09.072
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:09.072
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:09.072
+!MESSAGE Validated 1. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:11.257
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:14.548
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:25.698
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:25.715
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:26.134
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:26.134
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:26.149
+!MESSAGE begin problem for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:26.149
+!MESSAGE 1 problems reported for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:26.149
+!MESSAGE Validated 2. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:28.590
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:28.657
+!MESSAGE Reconciled 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.084
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.123
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.124
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.150
+!MESSAGE begin problem for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.151
+!MESSAGE 1 problems reported for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:29.151
+!MESSAGE Validated 2. Took 51 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:38.673
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:38.737
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.154
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.155
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.167
+!MESSAGE begin problem for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.167
+!MESSAGE 2 problems reported for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.167
+!MESSAGE Validated 2. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.541
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.554
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.972
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.973
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.986
+!MESSAGE begin problem for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.986
+!MESSAGE 1 problems reported for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:39.986
+!MESSAGE Validated 2. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:42.736
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:42.753
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.240
+!MESSAGE begin problem for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.240
+!MESSAGE 1 problems reported for /Stopwatch.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.262
+!MESSAGE begin problem for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.263
+!MESSAGE 1 problems reported for /StopwatchN.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.286
+!MESSAGE begin problem for /ReadWords.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.287
+!MESSAGE 1 problems reported for /ReadWords.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:43.287
+!MESSAGE Validated 3. Took 84 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:56.855
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:56.858
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:56.876
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-01-27 13:57:56.880
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

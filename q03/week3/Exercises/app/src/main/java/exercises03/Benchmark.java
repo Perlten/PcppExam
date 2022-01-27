@@ -13,7 +13,7 @@ class Benchmark {
 
   public Benchmark() {
     SystemInfo();
-    Mark6("Pow", i -> Math.pow(i, i));
+    // Mark6("Pow", i -> Math.pow(i, i));
     // Mark0();
     // Mark1();
     // Mark2();
@@ -21,7 +21,7 @@ class Benchmark {
     // Mark4();
     // Mark5();
     // Mark6("multiply", i -> multiply(i));
-    // Mark6("multiply", Benchmark::multiply); // same as line above, for motivation
+    Mark6("multiply", Benchmark::multiply); // same as line above, for motivation
     // see here
     // https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
     // Mark7("multiply", Benchmark::multiply);

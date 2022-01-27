@@ -16,9 +16,29 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src/exercises09/ObservableTester.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/pcppExam/q08/ExercisesCode/app/src/main/java/exercises09/ObservableTester.java</location>
+		</link>
+		<link>
+			<name>src/exercises09/ReadWords.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q08/ExercisesCode/app/src/main/java/exercises09/ReadWords.java</location>
+		</link>
+		<link>
+			<name>src/exercises09/Stopwatch.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q08/ExercisesCode/app/src/main/java/exercises09/Stopwatch.java</location>
+		</link>
+		<link>
+			<name>src/exercises09/StopwatchN.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q08/ExercisesCode/app/src/main/java/exercises09/StopwatchN.java</location>
+		</link>
+		<link>
 			<name>src/exercises09/StopwatchRx.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ConcurrentJavaExercises/all-exercises/app/src/main/java/week09/ExercisesCode/app/src/main/java/exercises09/StopwatchRx.java</location>
+			<location>/home/perlt/dev/school/ConcurrentJavaExercises/all-exercises/app/src/main/java/week09/ExercisesCode/app/src/main/java/exercises09/StopwatchRx.java</location>
 		</link>
 	</linkedResources>
 </projectDescription>

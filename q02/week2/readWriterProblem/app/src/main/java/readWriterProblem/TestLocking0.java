@@ -15,7 +15,7 @@ public class TestLocking0 {
 
         Thread t2 = new Thread(() -> {
             for (int i = 0; i < count; i++)
-                m.addStatic(1);
+                Mystery.addStatic(1);
         });
 
         t1.start();
@@ -24,7 +24,7 @@ public class TestLocking0 {
         t1.join();
         t2.join();
 
-        System.out.printf("Sum is %f and should be %f%n", m.sum(), 2.0 * count);
+        System.out.printf("Sum is %f and should be %f%n", Mystery.sum(), 2.0 * count);
     }
 }
 
@@ -32,6 +32,8 @@ class Mystery {
     private static double sum = 0;
     private static ReentrantLock lock = new ReentrantLock();
 
+    // If we dont use a lock we will get a race condition because a static 
+    // methods sync on the class whereas an instance of the class uses this
     public static synchronized void addStatic(double x) {
         try {
             Mystery.lock.lock();

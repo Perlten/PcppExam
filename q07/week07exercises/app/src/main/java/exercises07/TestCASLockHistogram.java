@@ -2,6 +2,8 @@
 // raup@itu.dk * 10/10/2021
 package exercises07;
 
+import org.checkerframework.checker.units.qual.C;
+
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntToDoubleFunction;
 
@@ -11,18 +13,23 @@ class TestCASLockHistogram {
     public static void main(String[] args) {
 
 	// Create an object `histogramCAS` with your Histogram CAS implementation
+		CasHistogram histogramCAS = new CasHistogram(23);
+		HistogramLock histogramLock = new HistogramLock(23);
+
 	// Create an object `histogramLock` with your Histogram Lock from week 5
 
 	// Testing correctness (uncomment lines below to test correctness)
-	// countParallel(5_000_000, 10, histogramCAS);
-	// dump(histogramCAS);
+	 countParallel(5_000_000, 10, histogramLock);
+	 countParallel(5_000_000, 10, histogramCAS);
+	 dump(histogramCAS);
+	 dump(histogramLock);
 
 	// Evaluating performance of CAS vs Locks histograms Uncomment
 	// snippet below to evaluate the performance both Histogram
 	// implementations
-	
+
 	int noThreads = 32;
-	int range     = 100_000;	
+	int range     = 100_000;
 
 	for (int i = 1; i < noThreads; i++) {
 	    int threadCount = i;
@@ -32,7 +39,7 @@ class TestCASLockHistogram {
 		      return 1.0;
 		  });
 	}
-	
+
 	for (int i = 1; i < noThreads; i++) {
 	    int threadCount = i;
 	    Mark7(String.format("Count CAS histogram %2d", threadCount),
@@ -41,7 +48,7 @@ class TestCASLockHistogram {
 		      return 1.0;
 		  });
 	}
-	
+//
     }
     
     // Function to count the prime factors of a number `p`

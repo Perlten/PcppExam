@@ -18,17 +18,32 @@
 		<link>
 			<name>src/exercises07/CasHistogram.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/CasHistogram.java</location>
+			<location>/home/perlt/dev/school/pcppExam/q07/week07exercises/app/src/main/java/exercises07/CasHistogram.java</location>
+		</link>
+		<link>
+			<name>src/exercises07/Histogram.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/ConcurrentJavaExercises/all-exercises/app/src/main/java/week07/code-exercises/week07exercises/app/src/main/java/exercises07/Histogram.java</location>
+		</link>
+		<link>
+			<name>src/exercises07/HistogramLock.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q07/week07exercises/app/src/main/java/exercises07/HistogramLock.java</location>
 		</link>
 		<link>
 			<name>src/exercises07/ReadWriteCASLock.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/ReadWriteCASLock.java</location>
+			<location>//home/perlt/dev/school/pcppExam/q07/week07exercises/app/src/main/java/exercises07/ReadWriteCASLock.java</location>
 		</link>
 		<link>
-			<name>src/exercises07/SimpleRWTryLock.java</name>
+			<name>src/exercises07/SimpleRWTryLockInterface.java</name>
 			<type>1</type>
-			<location>//home/perlt/dev/school/ITU/1.semester/pcpp/lectures/week07/code-exercises/week07exercises/app/src/main/java/exercises07/SimpleRWTryLock.java</location>
+			<location>//home/perlt/dev/school/pcppExam/q07/week07exercises/app/src/main/java/exercises07/SimpleRWTryLockInterface.java</location>
+		</link>
+		<link>
+			<name>src/exercises07/TestCASLockHistogram.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q07/week07exercises/app/src/main/java/exercises07/TestCASLockHistogram.java</location>
 		</link>
 	</linkedResources>
 </projectDescription>

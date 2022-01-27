@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>jdt.ls-java-project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/exercises05/Example154.java</name>
+			<type>1</type>
+			<location>/home/perlt/dev/school/pcppExam/q05/week5/week05exercises/app/src/main/java/exercises05-perlt/Example154.java</location>
+		</link>
+		<link>
+			<name>src/exercises05/TestWordStream.java</name>
+			<type>1</type>
+			<location>//home/perlt/dev/school/pcppExam/q05/week5/week05exercises/app/src/main/java/exercises05/TestWordStream.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

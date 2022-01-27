@@ -7,12 +7,12 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableSingleObserver;
 import io.reactivex.schedulers.Schedulers;
 
-public class ObservableTester  {
-    public static void main(String[] args)  throws InterruptedException {
-        //Create the observable
+public class ObservableTester {
+    public static void main(String[] args) throws InterruptedException {
+        // Create the observable
         Single<String> testSingle = Single.just("Hello World");
 
-        //Create an observer
+        // Create an observer
         Disposable disposable = testSingle
                 .delay(2, TimeUnit.SECONDS, Schedulers.io())
                 .subscribeWith(
@@ -29,7 +29,7 @@ public class ObservableTester  {
                             }
                         });
         Thread.sleep(3000);
-        //start observing
+        // start observing
         disposable.dispose();
     }
 }
